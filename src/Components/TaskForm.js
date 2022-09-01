@@ -17,10 +17,12 @@ function TaskForm() {
     setTask,
     setDate,
     addTask,
+    setTaskList,
   } = useContext(Context);
 
   const deleteTaskList = () => {
     localStorage.setItem("taskList", JSON.stringify([]));
+    setTaskList([]);
     setConfirmClear(!confirmClear);
   };
 
@@ -33,6 +35,7 @@ function TaskForm() {
           value={task}
           placeholder="I can't forget about..."
           onChange={({ target }) => setTask(target.value)}
+          maxLength="160"
         />
         <input
           type="date"

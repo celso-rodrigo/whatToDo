@@ -2,6 +2,16 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: 0;
+	list-style-type: none;
+}
+
+::placeholder {
+	text-align: center;
+}
+
+button:disabled {
+	opacity: 25%;
+	cursor: not-allowed;
 }
 
 button {
@@ -13,17 +23,12 @@ button {
 	background-color: transparent;
 }
 
-button:disabled {
-	opacity: 25%;
-	cursor: not-allowed;
-}
-
 #root {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 30px;
-	padding-top: 50px;
+	gap: 20px;
+	padding-top: 20px;
 }
 
 .task-form {
@@ -59,10 +64,6 @@ button:disabled {
 	border-radius: 10px;
 }
 
-::placeholder {
-	text-align: center;
-}
-
 .task-form .clear-all-tasks {
 	width: 100px;
 }
@@ -96,16 +97,61 @@ button:disabled {
 }
 
 .tasks-container {
+	padding: 20px;
 	border-radius: 20px;
 	width: 1100px;
 	height: 525px;
 	background-color: rgba(128, 128, 128, 0.2);
 }
 
+.tasks-container ul {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.task-card {
+	text-align: center;
+	border: 1px solid black;
+	border-radius: 20px;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	gap: 35px;
+	width: 1070px;
+}
+
+.task-card .task {
+	width: 575px;
+}
+
+.task-card .date {
+	width: 75px;
+}
+
+.task-card .buttons {
+	width: 350px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.task-card .buttons button {
+	height: 40px;
+	width: 40px;
+}
+
+.task-card .buttons .group-one, .task-card .buttons .group-two{
+	display: flex;
+	gap: 10px;
+}
+
+.task-card .group-one img, .buttons .group-two img {
+	height: 30px;
+	width: 30px;
+}
+
 footer {
-	position: absolute;
-	bottom: 10px;
-	left: 0;
 	width: 100%;
 	text-align: center;
 }
