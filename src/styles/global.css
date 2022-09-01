@@ -102,6 +102,7 @@ button {
 	width: 1100px;
 	height: 525px;
 	background-color: rgba(128, 128, 128, 0.2);
+	overflow-y: scroll;
 }
 
 .tasks-container ul {
@@ -117,23 +118,41 @@ button {
 	padding: 10px;
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: center;
 	gap: 35px;
 	width: 1070px;
 }
 
-.task-card .task {
+.task-card .task, .task-card .task-edit {
 	width: 575px;
+	overflow-wrap: break-word;
 }
 
-.task-card .date {
-	width: 75px;
+.task-card .task-edit {
+	text-indent: 10px;
+	border-radius: 10px;
+}
+
+.task-card .date, .task-card .date-edit {
+	width: 140px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.task-card .date-edit {
+	padding-right: 10px;
+}
+
+.task-edit, .date-edit {
+	border: none;
+	height: 30px;
 }
 
 .task-card .buttons {
-	width: 350px;
+	width: 275px;
 	display: flex;
-	justify-content: space-around;
+	justify-content: right;
+	gap: 30px;
 }
 
 .task-card .buttons button {
@@ -149,6 +168,10 @@ button {
 .task-card .group-one img, .buttons .group-two img {
 	height: 30px;
 	width: 30px;
+}
+
+.done-task {
+	text-decoration: line-through;
 }
 
 footer {

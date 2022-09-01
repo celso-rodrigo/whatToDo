@@ -32,7 +32,7 @@ function TodoListProvider({ children }) {
 
   const updateIdController = () => {
     const tasks = JSON.parse(localStorage.getItem("taskList"));
-    if (tasks.length) {
+    if (tasks !== null) {
       const highId = tasks.reduce((prev, curr) =>
         prev.id > curr.id ? prev : curr
       ).id;
@@ -63,6 +63,7 @@ function TodoListProvider({ children }) {
     setDate,
     addTask,
     setTaskList,
+    loadTaskList,
   };
 
   return <Context.Provider value={providerValue}>{children}</Context.Provider>;
