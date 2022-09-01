@@ -8,9 +8,14 @@ button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border: 1px solid black;
+	border: 2px solid black;
 	border-radius: 10px;
 	background-color: transparent;
+}
+
+button:disabled {
+	opacity: 25%;
+	cursor: not-allowed;
 }
 
 #root {
@@ -33,12 +38,14 @@ button {
 .task-form .main-container {
 	display: flex;
 	gap: 40px;
-	justify-content: center;
-	width: 70%;
+	justify-content: left;
+	padding-left: 20px;
+	width: 75%;
 	height: 50px;
 }
 
 .task-form .task-input {
+	border: 2px solid black;
 	width: 325px;
 	text-indent: 10px;
 	border-radius: 10px;
@@ -52,13 +59,17 @@ button {
 	border-radius: 10px;
 }
 
+::placeholder {
+	text-align: center;
+}
+
 .task-form .clear-all-tasks {
 	width: 100px;
 }
 
 .confirmation-buttons {
-	display:  flex;
-	gap: 20px;
+	display: flex;
+	gap: 10px;
 }
 
 .task-form .clear-all-tasks img {
@@ -81,7 +92,7 @@ button {
 	justify-content: flex-end;
 	gap: 25px;
 	padding-right: 25px;
-	width: 30%;
+	width: 25%;
 }
 
 .tasks-container {

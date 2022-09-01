@@ -9,7 +9,12 @@ function App() {
       <footer>
         <p>
           {"Created By "}
-          <a target="_black" href="https://www.linkedin.com/in/celso-rodrigo-monteiro-de-assis-419a371aa/">Celso Rodrigo</a>
+          <a
+            target="_black"
+            href="https://www.linkedin.com/in/celso-rodrigo-monteiro-de-assis-419a371aa/"
+          >
+            Celso Rodrigo
+          </a>
         </p>
       </footer>
     </>
