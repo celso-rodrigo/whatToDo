@@ -60,7 +60,7 @@ function TodoListProvider({ children }) {
 
   useEffect(() => {
     const changeBodyLightMode = () => {
-      document.body.classList = lightMode;
+      document.body.classList = `${lightMode}-body`;
       localStorage.setItem("lightMode", lightMode);
     };
     changeBodyLightMode();

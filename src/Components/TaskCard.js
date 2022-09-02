@@ -52,11 +52,11 @@ function TaskCard({ task }) {
   };
 
   return (
-    <li className={`task-card ${lightMode}`}>
+    <li className={`task-card task-card-${lightMode}`}>
       {editing ? (
         <input
           type="text"
-          maxLength="160"
+          maxLength="130"
           className="task-edit"
           value={editedTask}
           onChange={({ target }) => setEditedTask(target.value)}
@@ -76,7 +76,7 @@ function TaskCard({ task }) {
           className="date-edit"
           value={editedDate}
           onChange={({ target }) => setEditedDate(target.value)}
-        />
+          />
       ) : (
         <p className={`${lightMode} date`}>{treatDate(task.date)}</p>
       )}
@@ -86,6 +86,7 @@ function TaskCard({ task }) {
             type="button"
             disabled={editing}
             onClick={() => handleReOrder(task, "up")}
+            title="Move task up"
           >
             <img src={upIcon} alt="Move task up button." />
           </button>
@@ -93,28 +94,43 @@ function TaskCard({ task }) {
             type="button"
             disabled={editing}
             onClick={() => handleReOrder(task, "down")}
+            title="Move task down"
+            className="move-task"
           >
             <img src={downIcon} alt="Move task down button."></img>
           </button>
         </div>
         <div className="group-two">
           {editing ? (
-            <button onClick={() => handleEdit(task)}>
+            <button
+              onClick={() => handleEdit(task)}
+              title="Finish editing task."
+              className="edit-task"
+            >
               <img src={editIcon} alt="Edit task button."></img>
             </button>
           ) : (
-            <button onClick={() => setEditing(!editing)}>
+            <button
+              onClick={() => setEditing(!editing)}
+              title="Edit task."
+              className="edit-task"
+            >
               <img src={editIcon} alt="Edit task button."></img>
             </button>
           )}
-          <button type="button" disabled={editing}>
+          <button
+            type="button"
+            disabled={editing}
+            title="Mark task as compleated."
+            className="compleat-task"
+          >
             <img
               src={doneIcon}
               alt="Mark as compleat task button."
               onClick={() => setDone(!done)}
             ></img>
           </button>
-          <button type="button">
+          <button type="button" title="Delete task." className="delete-task">
             <img
               src={trashIcon}
               alt="delete task button."

@@ -5,8 +5,8 @@ import closeIcon from "../images/closeIcon.svg";
 function About() {
   const { showAbout, setShowAbout, lightMode } = useContext(Context);
   return (
-    <div className={`${lightMode} about ${showAbout ? "" : "hidden"}`}>
-      <header>
+    <div className={`about ${lightMode}-about ${showAbout ? "" : "hidden"}`}>
+      <header className="about-header">
         <h1>Hello there. 😄</h1>
         <button
           type="button"

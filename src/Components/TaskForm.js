@@ -31,7 +31,7 @@ function TaskForm() {
   };
 
   return (
-    <form className={`task-form ${lightMode}`}>
+    <form className={`task-form form-${lightMode}`}>
       <div className={`main-container ${lightMode}`}>
         <input
           type="text"
@@ -39,7 +39,7 @@ function TaskForm() {
           value={task}
           placeholder="I can't forget about..."
           onChange={({ target }) => setTask(target.value)}
-          maxLength="160"
+          maxLength="130"
         />
         <input
           type="date"
@@ -49,19 +49,28 @@ function TaskForm() {
         />
         <button
           type="button"
+          className="add-task-button"
           onClick={() => addTask(task, date)}
           disabled={!task.length}
+          title="Add new task."
         >
           <img src={pinIcon} alt="Save task button." />
         </button>
         {confirmClear ? (
           <div className="confirmation-buttons">
-            <button type="button" onClick={deleteTaskList}>
+            <button
+              type="button"
+              onClick={deleteTaskList}
+              title="Confirm clearing all tasks."
+              className="cornfimation"
+            >
               <img src={doneIcon} alt="Confirm clear all tasks button." />
             </button>
             <button
               type="button"
               onClick={() => setConfirmClear(!confirmClear)}
+              title="Cancel clearing all tasks."
+              className="cornfimation"
             >
               <img src={closeIcon} alt="Cancel clear all tasks button." />
             </button>
@@ -71,21 +80,25 @@ function TaskForm() {
             className="clear-all-tasks"
             type="button"
             onClick={() => setConfirmClear(!confirmClear)}
+            title="Clear all tastks."
           >
             <img src={trashAllIcon} alt="Clear all tasks button." />
           </button>
         )}
       </div>
-      <div className="secundary-container">
+      <div className={`secundary-container ${lightMode}`}>
         <button type="button">
           <img
             src={questionIcon}
             alt="About button."
+            title="About."
             onClick={() => setShowAbout(!showAbout)}
           />
         </button>
         <button
+          className={`mode-button-${lightMode}`}
           type="button"
+          title="Toggle light mode."
           onClick={() => setLightMode(lightMode === "light" ? "dark" : "light")}
         >
           <img src={lightIcon} alt="Toggle light/dark mode." />
