@@ -13,7 +13,7 @@ function TaskCard({ task }) {
   const [editedTask, setEditedTask] = useState(task.task);
   const [editedDate, setEditedDate] = useState(task.date);
 
-  const { taskList, loadTaskList } = useContext(Context);
+  const { taskList, loadTaskList, lightMode } = useContext(Context);
 
   const removeTask = (currTask) => {
     const filteredTask = taskList.filter((task) => task !== currTask);
@@ -52,7 +52,7 @@ function TaskCard({ task }) {
   };
 
   return (
-    <li className="task-card">
+    <li className={`task-card ${lightMode}`}>
       {editing ? (
         <input
           type="text"
@@ -63,7 +63,7 @@ function TaskCard({ task }) {
         />
       ) : (
         <p
-          className={`task ${done ? "done-task" : ""}`}
+          className={`task ${lightMode} ${done ? "done-task" : ""}`}
           onClick={() => setDone(!done)}
         >
           {task.task}
@@ -78,16 +78,16 @@ function TaskCard({ task }) {
           onChange={({ target }) => setEditedDate(target.value)}
         />
       ) : (
-        <p className="date">{treatDate(task.date)}</p>
+        <p className={`${lightMode} date`}>{treatDate(task.date)}</p>
       )}
-      <div className="buttons">
+      <div className={"buttons"}>
         <div className="group-one">
           <button
             type="button"
             disabled={editing}
             onClick={() => handleReOrder(task, "up")}
           >
-            <img src={upIcon} alt="Move task up button."></img>
+            <img src={upIcon} alt="Move task up button." />
           </button>
           <button
             type="button"

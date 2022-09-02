@@ -17,7 +17,11 @@ function TaskForm() {
     setTask,
     setDate,
     addTask,
+    lightMode,
     setTaskList,
+    showAbout,
+    setShowAbout,
+    setLightMode,
   } = useContext(Context);
 
   const deleteTaskList = () => {
@@ -27,8 +31,8 @@ function TaskForm() {
   };
 
   return (
-    <form className="task-form">
-      <div className="main-container">
+    <form className={`task-form ${lightMode}`}>
+      <div className={`main-container ${lightMode}`}>
         <input
           type="text"
           className="task-input"
@@ -74,9 +78,16 @@ function TaskForm() {
       </div>
       <div className="secundary-container">
         <button type="button">
-          <img src={questionIcon} alt="About button." />
+          <img
+            src={questionIcon}
+            alt="About button."
+            onClick={() => setShowAbout(!showAbout)}
+          />
         </button>
-        <button type="button">
+        <button
+          type="button"
+          onClick={() => setLightMode(lightMode === "light" ? "dark" : "light")}
+        >
           <img src={lightIcon} alt="Toggle light/dark mode." />
         </button>
       </div>

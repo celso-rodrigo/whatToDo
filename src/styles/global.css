@@ -5,8 +5,52 @@
 	list-style-type: none;
 }
 
+body {
+	transition: 0;
+}
+
 ::placeholder {
 	text-align: center;
+}
+
+.hidden {
+	opacity: 0;
+	z-index: -1;
+}
+
+.light {
+	background-color: rgb(240, 240, 240);
+	color: black;
+	border-color: white;
+	transition: 0.7s;
+}
+
+.light input {
+	background-color: white;
+}
+
+.dark {
+	background-color: rgb(30, 30, 30);
+	color: white;
+	border-color: black;
+	transition: 0.7s;
+}
+
+.dark form {
+	border-color: white;
+}
+
+.dark button {
+	filter: grayscale(100%) invert(100%);
+}
+
+.dark input {
+	background-color: rgb(220, 220, 220);
+	color: black;
+}
+
+.dark a {
+	color: red;
 }
 
 button:disabled {
@@ -21,6 +65,7 @@ button {
 	border: 2px solid black;
 	border-radius: 10px;
 	background-color: transparent;
+	transition: 0.7s;
 }
 
 #root {
@@ -101,7 +146,7 @@ button {
 	border-radius: 20px;
 	width: 1100px;
 	height: 525px;
-	background-color: rgba(128, 128, 128, 0.2);
+	background-color: rgba(128, 128, 128, 0.3);
 	overflow-y: scroll;
 }
 
@@ -123,7 +168,8 @@ button {
 	width: 1070px;
 }
 
-.task-card .task, .task-card .task-edit {
+.task-card .task,
+.task-card .task-edit {
 	width: 575px;
 	overflow-wrap: break-word;
 }
@@ -133,7 +179,8 @@ button {
 	border-radius: 10px;
 }
 
-.task-card .date, .task-card .date-edit {
+.task-card .date,
+.task-card .date-edit {
 	width: 140px;
 	text-align: center;
 	border-radius: 10px;
@@ -143,7 +190,8 @@ button {
 	padding-right: 10px;
 }
 
-.task-edit, .date-edit {
+.task-edit,
+.date-edit {
 	border: none;
 	height: 30px;
 }
@@ -160,12 +208,14 @@ button {
 	width: 40px;
 }
 
-.task-card .buttons .group-one, .task-card .buttons .group-two{
+.task-card .buttons .group-one,
+.task-card .buttons .group-two {
 	display: flex;
 	gap: 10px;
 }
 
-.task-card .group-one img, .buttons .group-two img {
+.task-card .group-one img,
+.buttons .group-two img {
 	height: 30px;
 	width: 30px;
 }
@@ -177,6 +227,54 @@ button {
 footer {
 	width: 100%;
 	text-align: center;
+	padding: 8px 0;
+}
+
+.about {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	text-align: center;
+	position: fixed;
+	width: 500px;
+	height: 300px;
+	padding: 20px;
+	border-radius: 20px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -65%);
+	transition: 0.7s;
+	box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px, rgba(0, 0, 0, 0.3) 0 7px 13px -3px, rgba(0, 0, 0, 0.2) 0 -3px 0 inset;
+}
+
+.about header {
+	display: flex;
+}
+
+.about h1 {
+	width: 450px;
+	text-align: center;
+}
+
+.about .close-button {
+	justify-self: flex-end;
+}
+
+.about .links {
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+	width: 100%;
+}
+
+.about .links a img {
+	width: 100%;
+	height: 100%;
+}
+
+.about .links a img {
+	height: 35px;
+	border-radius: 5px;
 }
 
 /* @media screen and (max-width: 1000px) and (min-width: 360px)

@@ -3,11 +3,16 @@ import Context from "./Context";
 import PropTypes from "prop-types";
 
 function TodoListProvider({ children }) {
+  const savedLightMode = localStorage.getItem("lightMode");
+  const [lightMode, setLightMode] = useState(
+    savedLightMode !== null ? savedLightMode : "light"
+  );
   const [taskList, setTaskList] = useState([]);
   const [task, setTask] = useState("");
   const [date, setDate] = useState("");
   const [idControl, setIdControl] = useState(0);
   const [confirmClear, setConfirmClear] = useState(false);
+  const [showAbout, setShowAbout] = useState(false);
 
   const loadTaskList = () => {
     const allTasks = localStorage.getItem("taskList");
@@ -32,7 +37,7 @@ function TodoListProvider({ children }) {
 
   const updateIdController = () => {
     const tasks = JSON.parse(localStorage.getItem("taskList"));
-    if (tasks !== null) {
+    if (tasks !== null && task.length) {
       const highId = tasks.reduce((prev, curr) =>
         prev.id > curr.id ? prev : curr
       ).id;
@@ -53,12 +58,24 @@ function TodoListProvider({ children }) {
     loadTaskList();
   }, []);
 
+  useEffect(() => {
+    const changeBodyLightMode = () => {
+      document.body.classList = lightMode;
+      localStorage.setItem("lightMode", lightMode);
+    };
+    changeBodyLightMode();
+  }, [lightMode]);
+
   const providerValue = {
     confirmClear,
     task,
     date,
-    setConfirmClear,
     taskList,
+    showAbout,
+    lightMode,
+    setLightMode,
+    setShowAbout,
+    setConfirmClear,
     setTask,
     setDate,
     addTask,
