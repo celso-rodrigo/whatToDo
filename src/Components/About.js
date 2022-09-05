@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
-import Context from "../context/Context";
-import closeIcon from "../images/closeIcon.svg";
+import React, { useContext } from 'react';
+import Context from '../context/Context';
+import closeIcon from '../images/closeIcon.svg';
 
 function About() {
   const { showAbout, setShowAbout, lightMode } = useContext(Context);
   return (
-    <div className={`about ${lightMode}-about ${showAbout ? "" : "hidden"}`}>
+    <div className={`about ${lightMode}-about ${showAbout ? '' : 'hidden'}`}>
       <header className="about-header">
         <h1>Hello there. 😄</h1>
         <button
@@ -27,7 +27,7 @@ function About() {
           target="_blank"
         >
           <img
-            src="https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white"
+            src="https://www.linkedin.com/in/celso-rodrigo-monteiro/"
             alt="LinkedIn redirect button."
           />
         </a>
