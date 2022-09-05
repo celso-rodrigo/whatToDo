@@ -23,18 +23,18 @@ A simple to-do list application.
   <ol>
     <li>
       <p>Install the repository</p>
-      <code>git clone git@github.com:celso-rodrigo/whatToDo.git</code>
+      <pre>git clone git@github.com:celso-rodrigo/whatToDo.git</pre>
     </li>
     <li>
       <p>Open the repository folder</p>
     </li>
     <li>
       <p>Install NPM packages</p>
-      <code>npm install</code>
+      <pre>npm install</pre>
     </li>
     <li>
       <p>Start the project</p>
-      <code>npm start</code>
+      <pre>npm start</pre>
     </li>
   </ol>
 </details>
@@ -57,22 +57,22 @@ A simple to-do list application.
  
   <br/>
  
-  <h3>Installation guide</h3> 
+  <h3>Guia de instalação</h3> 
   <ol>
     <li>
       <p>Instale o repositório</p>
-      <code>git clone git@github.com:celso-rodrigo/whatToDo.git</code>
+      <pre>git clone git@github.com:celso-rodrigo/whatToDo.git</pre>
     </li>
     <li>
       <p>Abra a pasta do repositório</p>
     </li>
     <li>
       <p>Instale as dependências</p>
-      <code>git clone git@github.com:celso-rodrigo/whatToDo.git</code>
+      <pre>git clone git@github.com:celso-rodrigo/whatToDo.git</pre>
     </li>
     <li>
       <p>Inicie o projetot</p>
-      <code>npm start</code>
+      <pre>npm start</pre>
     </li>
   </ol>
 </details>
