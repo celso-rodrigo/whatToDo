@@ -1,32 +1,87 @@
-# whatToDo
+<h1>whatToDo</h1>
 A simple to-do list application.
 
-*****
-:us:
-I developed this application to practice **React**, **ContextApi** and **programming logic**. You can:
-- Add tasks with or without given data
-- Edit tasks
-- Reorder tasks
-- Mark tasks as complete
-- Delete one or all tasks
-- Change site theme to light/dark mode
+***
 
-*****
-:brazil:
-Fiz essa aplicação para praticar um pouco de **React**, **Context AP**I e **lógica de programação**. Nela você pode:
-- Adicionar tarefas com ou sem data determinada
-- Editar tarefas
-- Reordenar tarefas
-- Marcar tarefas como concluídas
-- Apagar uma ou todas as tarefas
-- Mudar o tema do site para light/dark mode
+<details>
+  <summary><h2>Read in English :us:</h2></summary><br />
+  <h3>About</h3>
+  <p>I developed this application to practice React and Context API through an application that allows customization and storage of your tasks</p>
+  <p>You can:</p>
+  <ul>
+    <li>Add tasks with or without given data</li>
+    <li>Edit tasks</li>
+    <li>Reorder tasks</li>
+    <li>Mark tasks as complete</li>
+    <li>Delete one or all tasks</li>
+    <li>Change site theme to light/dark mode</li>
+  </ul>  
+ 
+  <br/>
+ 
+  <h3>Installation guide</h3> 
+  <ol>
+    <li>
+      <p>Install the repository</p>
+      <code>git clone git@github.com:celso-rodrigo/whatToDo.git</code>
+    </li>
+    <li>
+      <p>Open the repository folder</p>
+    </li>
+    <li>
+      <p>Install NPM packages</p>
+      <code>npm install</code>
+    </li>
+    <li>
+      <p>Start the project</p>
+      <code>npm start</code>
+    </li>
+  </ol>
+</details>
 
-*****
+***
 
-![Project first gif](https://github.com/celso-rodrigo/whatToDo/blob/main/src/images/gif1.gif)
+<details>
+<summary><h2>Leia em português :brazil:</h2></summary><br />
+  <h3>Sobre</h3>
+  <p>O objetivo desse projeto é praticar React e Context API através de uma aplicação que permite customização e armazenamente das suas tarefas</p>
+  <p>Nela você pode:</p>
+  <ul>
+    <li>Adicionar tarefas com ou sem data determinada</li>
+    <li>Editar tarefas</li>
+    <li>Editar tarefas</li>
+    <li>Marcar tarefas como concluídas</li>
+    <li>Apagar uma ou todas as tarefas</li>
+    <li>Mudar o tema do site para light/dark mode</li>
+  </ul>  
+ 
+  <br/>
+ 
+  <h3>Installation guide</h3> 
+  <ol>
+    <li>
+      <p>Instale o repositório</p>
+      <code>git clone git@github.com:celso-rodrigo/whatToDo.git</code>
+    </li>
+    <li>
+      <p>Abra a pasta do repositório</p>
+    </li>
+    <li>
+      <p>Instale as dependências</p>
+      <code>git clone git@github.com:celso-rodrigo/whatToDo.git</code>
+    </li>
+    <li>
+      <p>Inicie o projetot</p>
+      <code>npm start</code>
+    </li>
+  </ol>
+</details>
 
+***
 
-![Project second gif](https://github.com/celso-rodrigo/whatToDo/blob/main/src/images/gif2.gif)
-
-
-![Project third gif](https://github.com/celso-rodrigo/whatToDo/blob/main/src/images/gif3.gif)
+<details>
+  <summary><h3>Images</h3></summary><br />
+  <img src="https://github.com/celso-rodrigo/whatToDo/blob/main/src/images/gif1.gif" alt="Project first gif">
+  <img src="https://github.com/celso-rodrigo/whatToDo/blob/main/src/images/gif2.gif" alt="Project second gif">
+  <img src="https://github.com/celso-rodrigo/whatToDo/blob/main/src/images/gif3.gif" alt="Project third gif">
+</details>
