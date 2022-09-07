@@ -42,6 +42,7 @@ function TaskForm() {
           maxLength="130"
         />
         <input
+          title="Date input"
           type="date"
           className="date-input"
           value={date}
@@ -51,8 +52,7 @@ function TaskForm() {
           type="button"
           className="add-task-button"
           onClick={() => addTask(task, date)}
-          disabled={!task.length}
-          title="Add new task."
+          disabled={!task.length} 
         >
           <img src={pinIcon} alt="Save task button." />
         </button>
