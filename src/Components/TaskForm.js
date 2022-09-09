@@ -31,7 +31,7 @@ function TaskForm() {
   };
 
   return (
-    <form className={`task-form form-${lightMode}`}>
+    <div className={`task-form form-${lightMode}`}>
       <div className={`main-container ${lightMode}`}>
         <input
           type="text"
@@ -104,7 +104,7 @@ function TaskForm() {
           <img src={lightIcon} alt="Toggle light/dark mode." />
         </button>
       </div>
-    </form>
+    </div>
   );
 }
 

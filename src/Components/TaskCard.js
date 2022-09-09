@@ -8,10 +8,11 @@ import trashIcon from "../images/trashIcon.svg";
 import Context from "../context/Context";
 
 function TaskCard({ task }) {
-  const [done, setDone] = useState(false);
+  const EMPTY_DATE = "----------";
   const [editing, setEditing] = useState(false);
+  const [done, setDone] = useState(false);
   const [editedTask, setEditedTask] = useState(task.task);
-  const [editedDate, setEditedDate] = useState(task.date);
+  const [editedDate, setEditedDate] = useState(task.date === EMPTY_DATE ? "" : task.date);
 
   const { taskList, loadTaskList, lightMode } = useContext(Context);
 
@@ -23,14 +24,14 @@ function TaskCard({ task }) {
 
   const treatDate = (date) => {
     return date.length
-      ? date.replace(/(\d{4})\-(\d{2})\-(\d{2})/, "$3/$2/$1")
-      : "----------";
+      ? date.replace(/(\d{4})-(\d{2})-(\d{2})/, "$3/$2/$1")
+      : EMPTY_DATE;
   };
 
   const handleEdit = (currTask) => {
     const newTaskObj = {
       task: editedTask,
-      date: editedDate || "----------",
+      date: editedDate || EMPTY_DATE,
       id: task.id,
     };
     const newTaskArr = taskList.map((task) =>
@@ -76,7 +77,7 @@ function TaskCard({ task }) {
           className="date-edit"
           value={editedDate}
           onChange={({ target }) => setEditedDate(target.value)}
-          />
+        />
       ) : (
         <p className={`${lightMode} date`}>{treatDate(task.date)}</p>
       )}
@@ -111,7 +112,7 @@ function TaskCard({ task }) {
             </button>
           ) : (
             <button
-              onClick={() => setEditing(!editing)}
+              onClick={() => setEditing((prev) => !prev)}
               title="Edit task."
               className="edit-task"
             >
@@ -127,7 +128,7 @@ function TaskCard({ task }) {
             <img
               src={doneIcon}
               alt="Mark as compleat task button."
-              onClick={() => setDone(!done)}
+              onClick={() => setDone((prev) => !prev)}
             ></img>
           </button>
           <button type="button" title="Delete task." className="delete-task">

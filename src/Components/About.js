@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
-import Context from '../context/Context';
-import closeIcon from '../images/closeIcon.svg';
+import React, { useContext } from "react";
+import Context from "../context/Context";
+import closeIcon from "../images/closeIcon.svg";
 
 function About() {
   const { showAbout, setShowAbout, lightMode } = useContext(Context);
   return (
-    <div className={`about ${lightMode}-about ${showAbout ? '' : 'hidden'}`}>
+    <div className={`about ${lightMode}-about ${showAbout ? "" : "hidden"}`}>
       <header className="about-header">
         <h1>Hello there. 😄</h1>
         <button
@@ -24,14 +24,14 @@ function About() {
       <div className="links">
         <a
           href="https://www.linkedin.com/in/celso-rodrigo-monteiro-de-assis-419a371aa/"
-          target="_blank"
+          target="_blank" rel="noreferrer"
         >
           <img
-            src="https://www.linkedin.com/in/celso-rodrigo-monteiro/"
+            src="https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white"
             alt="LinkedIn redirect button."
           />
         </a>
-        <a href="https://github.com/celso-rodrigo" target="_blank">
+        <a href="https://github.com/celso-rodrigo" target="_blank" rel="noreferrer">
           <img
             src="https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github"
             alt="Github redirect button."
