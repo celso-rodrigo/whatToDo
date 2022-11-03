@@ -44,7 +44,7 @@ A simple to-do list application.
 <details>
 <summary><h2>Leia em português :brazil:</h2></summary><br />
   <h3>Sobre</h3>
-  <p>O objetivo desse projeto é praticar React e Context API através de uma aplicação que permite customização e armazenamente das suas tarefas</p>
+  <p>O objetivo desse projeto é praticar React e Context API através de uma aplicação que permite customização e armazenamento das suas tarefas</p>
   <p>Nela você pode:</p>
   <ul>
     <li>Adicionar tarefas com ou sem data determinada</li>
