@@ -70,7 +70,7 @@ A simple to-do list application.
     </li>
     <li>
       <p>Instale as dependências</p>
-      <pre>git clone git@github.com:celso-rodrigo/whatToDo.git</pre>
+      <pre>npm install</pre>
     </li>
     <li>
       <p>Inicie o projetot</p>
